@@ -1,6 +1,6 @@
-import modes
-import note_names
-import keys
+import .modes
+import .note_names
+import .keys
 from pychord import note_to_chord
 
 
@@ -11,6 +11,8 @@ def get_note_name(index, key):
     note = key.value + index
 
     notes = []
+
+    # TODO: sistema questa che fa schifo
     if str(key).lower().find("b") > -1:
         notes = note_names.NOTES_FLAT
     else:
