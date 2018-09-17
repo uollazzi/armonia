@@ -1,7 +1,4 @@
 class Mode:
-    name = ''
-    intervals = []
-
     def __init__(self, name, intervals):
         self.name = name
         self.intervals = intervals
