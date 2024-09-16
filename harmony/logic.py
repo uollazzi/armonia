@@ -1,11 +1,9 @@
 from .note_names import NOTES_SHARP, NOTES_FLAT
-from pychord import note_to_chord
+from pychord import find_chords_from_notes
 
 
 def get_note_name(index, key):
-    """
-
-    """
+    """ """
     note = key.value + index
 
     notes = []
@@ -32,7 +30,7 @@ def get_scale(mode, key):
     retval = []
 
     # PRINT THE SCALE
-    for i in mode:       
+    for i in mode:
         retval.append(get_note_name(i, key))
 
     return retval
@@ -55,6 +53,6 @@ def get_chords(mode, key, seventh=False, ninth=False):
         if ninth:
             chord.append(get_note_name(get_note_by_index(mode, i + 1), key))
 
-        retval.append(note_to_chord(chord))
+        retval.append(find_chords_from_notes(chord)[0])
 
     return retval

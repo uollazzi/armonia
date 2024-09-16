@@ -2,7 +2,7 @@ from harmony import modes, keys, get_chords, get_scale
 import random
 
 # specifica la tonalità di partenza
-key = keys.Key.E
+key = keys.Key.G
 
 # percentuale di cambio modo
 mode_change_chance = 0.1
